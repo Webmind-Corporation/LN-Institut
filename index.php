@@ -12,7 +12,12 @@
     </head>
     <body>
         <header>
-            
+            <div id="leftHeader">
+                <h1 class="heroTitle">Laissez nous prendre soin de vous</h1>
+                <p class="heroDesc">LN institut pense que votre bien être mérite le meilleur.</p>
+                <button id="cta">Voir nos offres</button>
+            </div>
+            <div id="rightHeader"></div>
         </header>
         <main>
             
