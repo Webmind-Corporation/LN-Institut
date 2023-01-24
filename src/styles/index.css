@@ -1,6 +1,139 @@
-header {
+html {
     background-image: url("../assets/header.webp");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 1000vh;
+}
+
+body {
+    opacity: 1;
+    animation: bodyApparition 0.5s 0.2s ease-out forwards;
+}
+
+header h2#ln {
+    position: absolute;
+    top: 10%;
+    left: 39%;
+    font-size: 20vw;
+    font-family: 'DM Serif Display';
+    opacity: 0;
+    transform: translateY(-5vh);
+    animation: apparition 1s 1s ease-out forwards;
+}
+
+header p#sousTitle {
+    position: absolute;
+    top: 47%;
+    left: 20%;
+    font-size: 5vw;
+    font-family: 'amsterdamfour_ttf';
+    opacity: 0;
+    transform: translateY(10vh);
+}
+
+header p#sousTitle1 {
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    font-size: 5vw;
+    font-family: 'amsterdamfour_ttf';
+    opacity: 0;
+    transform: translateY(10vh);
+}
+
+header p#sousTitle2 {
+    position: absolute;
+    top: 47%;
+    left: 60%;
+    font-size: 5vw;
+    font-family: 'amsterdamfour_ttf';
+    opacity: 0;
+    transform: translateY(10vh);
+}
+
+header > p:nth-child(2), p:nth-child(4){
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+header > p:nth-child(3){
+    animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+section#contain {
+    padding: 100vh 0 10%;
+}
+
+div#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--primary);
+    margin: 0 10vw;
+}
+
+div#contact h2 {
+    font-size: 200%;
+    font-weight: bold;
+    color: var(--title);
+    text-align: left;
+    margin: 2% 0 1% 10%;
+}
+
+div.container{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    border-radius: 10px;
+    background: var(--color);
+}
+
+div#facebook {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    background: transparent;
+    margin: 0 3%
+}
+
+div#facebook p {
+    font-size: 110%;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+div#facebook a {
+    width: 2vw;
+    height: 2vw;
+    background-image: url("../assets/facebook.png");
+    background-size: cover;
+}
+
+div.container a#num {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 130%;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 1% 2%;
+    transition: all 0.3s ease-in-out;
+    margin: auto 0;
+}
+
+div.container a#num:hover {
+    background: var(--secondary);
+    color: var(--color);
+    box-shadow: 0 0 20px var(--green);
+}
+
+iframe {
+    width: 600px; 
+    height: 450px; 
+    border: 0;
 }
