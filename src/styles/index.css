@@ -4,13 +4,14 @@ html {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 1000vh;
 }
 
 body {
     opacity: 1;
     animation: bodyApparition 0.5s 0.2s ease-out forwards;
 }
+
+/* ############## LOGO ############## */
 
 header h2#ln {
     position: absolute;
@@ -86,7 +87,7 @@ div#contact h2 {
 div.container{
     display: flex;
     width: 100%;
-    height: 10vh;
+    height: fit-content;
     border-radius: 10px;
     background: var(--color);
 }
@@ -99,7 +100,8 @@ div#facebook {
     height: auto;
     border-radius: 10px;
     background: transparent;
-    margin: 0 3%
+    margin: 0 3%;
+    cursor: pointer;
 }
 
 div#facebook p {
@@ -109,8 +111,8 @@ div#facebook p {
 }
 
 div#facebook a {
-    width: 2vw;
-    height: 2vw;
+    width: 20px;
+    height: 20px;
     background-image: url("../assets/facebook.png");
     background-size: cover;
 }
@@ -130,6 +132,133 @@ div.container a#num:hover {
     background: var(--secondary);
     color: var(--color);
     box-shadow: 0 0 20px var(--green);
+}
+
+div#tarif {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--primary);
+    margin: 0 5vw 10vh;
+}
+
+div#tarif h2#titleTarif {
+    font-size: 200%;
+    font-weight: bold;
+    color: var(--title);
+    text-align: left;
+    margin: 2% 0 1% 10%;
+}
+
+div#tarif div.containerList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--color);
+}
+
+div#tarif div.containerCategory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--color);
+    margin: 0 auto 2%;
+}
+
+div#tarif div.containerCategory h2 {
+    font-size: 150%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: left;
+    margin: 2% 0 1%;
+}
+
+div#tarif div.containerCategory h2.left {
+    margin-left: 10%;
+}
+
+div#tarif div.containerCategory h2.right {
+    margin-left: 55%;
+}
+
+div#tarif div.containerCategory div.categoryContainer {
+    display: flex;
+    z-index: 30;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2%;
+    width: 50%;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--primary);
+}
+
+div#tarif div.containerCategory div.categoryContainer h2 {
+    font-size: 120%;
+    font-weight: bold;
+    color: var(--title);
+    text-align: left;
+    margin: 2% 0 1% 10%;
+}
+
+div#tarif div.containerCategory div.categoryContainer div.productContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    background: var(--color);
+    padding: 0 3% 1% 0;
+}
+
+div#tarif div.containerCategory div.categoryContainer div.productContainer p {
+    font-size: 100%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: left;
+    margin: 1% 0 0 5%;
+}
+
+div#tarif div.containerCategory div.categoryContainer div.productContainer div.contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+img#sopolish {
+    z-index: 20;
+    transform: scale(0.5) rotateZ(25deg);
+    position: relative;
+    top : 170vh;
+    left: 80vw;
+    filter: drop-shadow(0 0 30px var(--primary));
+}
+
+img#byotea {
+    z-index: 20;
+    transform: scale(0.8) rotateZ(25deg);
+    position: relative;
+    top : 40vh;
+    left: 29vw;
+    filter: drop-shadow(0 0 30px var(--primary));
+}
+
+.right {
+    margin-left: 45%;
+}
+
+.left {
+    margin-left: 3%;
 }
 
 iframe {

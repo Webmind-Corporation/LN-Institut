@@ -1,3 +1,13 @@
+<?php 
+    $pdo = new PDO('sqlite:./backend/data.db');
+
+    $products = $pdo->query("SELECT * FROM PRODUCT");
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang='fr'>
     <head>
@@ -37,6 +47,120 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.310850001462!2d1.4311845154117255!3d43.68330055850189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aea46d84fe7c3f%3A0x4f2da1bb6eda942!2s10%20Rue%20Didier%20Daurat%2C%2031140%20Fonbeauzard!5e0!3m2!1sfr!2sfr!4v1673149253875!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </main>
         </section>
+        <img id="sopolish" src="./src/assets/sopolish.png" alt='Produits "sopolish" de Pronails'>
+        <img id="byotea" src="./src/assets/byotea.png" alt='Produits "Byotea Skin Care"'>
+        <div id="tarif">
+            <h2 id="titleTarif">Tarif</h2>
+            <div class="containerCategory">
+                <h2 class="left">Épilation</h2>
+                <div class="categoryContainer left">
+                    <h2>Visage</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'epilation' && $product['subCategory'] == 'visage') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <div class="categoryContainer left">
+                    <h2>Corps</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'epilation' && $product['subCategory'] == 'corps') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <div class="categoryContainer left">
+                    <h2>Forfaits</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'epilation' && $product['subCategory'] == 'forfaits') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <h2 class="right">Beauté</h2>
+                <div class="categoryContainer right">
+                    <h2>Regard</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'beaute' && $product['subCategory'] == 'regard') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <div class="categoryContainer right">
+                    <h2>Mains et Pieds</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'beaute' && $product['subCategory'] == 'mains et pieds') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <div class="categoryContainer right">
+                    <h2>Vernis Semi-Permanent</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'beaute' && $product['subCategory'] == 'semi permanent') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <h2 class="left">Soins</h2>
+                <div class="categoryContainer left">
+                    <h2>Visage</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'soins' && $product['subCategory'] == 'visage') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+                <div class="categoryContainer left ">
+                    <h2>Corps</h2>
+                    <div class="productContainer">
+                        <?php $products = $pdo->query("SELECT * FROM PRODUCT"); ?>
+                        <?php
+                            foreach ($products as $product) {
+                                if ($product['category'] == 'soins' && $product['subCategory'] == 'corps') { ?>
+                                    <div class="contain"><p class="nameProduct"><?php echo $product['name'] ?></p><p class="price"><?php echo $product['price'] . "€" ?></p></div>
+                                <?php }
+                            }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="contact">
             <h2 id="titleContact">Contacter</h2>
             <div class="container">

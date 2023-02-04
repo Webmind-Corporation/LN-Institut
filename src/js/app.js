@@ -1,6 +1,7 @@
-let truc = document.getElementById('sousTitle1');
+facebook = document.getElementById('facebook');
 
-window.addEventListener('scroll', function() {
-    opacite = 1 - (window.pageYOffset / 300);
-    truc.style.opacity = opacite;
-});
+if (facebook) {
+    facebook.addEventListener('click', function() {
+        window.open('https://www.facebook.com/LN-Institut-162260040637184/', '_blank');
+    });
+}
