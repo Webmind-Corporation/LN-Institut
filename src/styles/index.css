@@ -6,6 +6,10 @@ html {
     background-repeat: no-repeat;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     opacity: 1;
     animation: bodyApparition 0.5s 0.2s ease-out forwards;
@@ -61,9 +65,205 @@ header > p:nth-child(3){
     animation: apparition 0.8s 0.8s ease-out forwards;
 }
 
-section#contain {
-    padding: 100vh 0 10%;
+/* ############## Separation ############## */
+
+section#separation {
+    margin: 100vh 0 10%;
+    padding: 7% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color);
+    height: fit-content;
+    width: 100%;
 }
+
+section h3 {
+    font-size: 250%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+section p {
+    font-size: 120%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+section button {
+    font-size: 120%;
+    font-weight: bold;
+    color: var(--color);
+    text-align: center;
+    background-color: var(--primary);
+    border: var(--primary) 2px solid;
+    border-radius: 10px;
+    padding: 1% 3%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+section button:hover {
+    background-color: var(--color);
+    color: var(--primary);
+    border: var(--primary) 2px solid;
+}
+
+/* ############## Presentation ############## */
+
+div#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--primary);
+    margin: 0 5vw 10vh;
+    padding-bottom: 3%;
+}
+
+div#info h2 {
+    font-size: 200%;
+    font-weight: bold;
+    color: var(--title);
+    text-align: left;
+    margin: 2% 0 1% 10%;
+}
+
+div#info div.containerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+    border-radius: 10px;
+    background: var(--color);
+    margin: 0 auto 2%;
+}
+
+div#info div.containerInfo div#containerCategory {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0 2%;
+}
+
+div.categoryContainer h3 {
+    font-size: 115%;
+    font-weight: bold;
+    color: var(--title);
+    text-align: left;
+    margin: 2% 0 1% 10%;
+}
+
+div#containerCategory div.categoryContainer {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+div.categoryContainer div#horaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    background: var(--color);
+    padding: 0 3% 1% 0;
+}
+
+p#location {
+    cursor: pointer;
+}
+
+p#location:hover {
+    text-decoration: underline;
+}
+
+div.categoryContainer div#horaire p {
+    font-size: 110%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: left;
+    margin: 2% 0 1% 10%;
+}
+
+div.categoryContainer div#shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    background: var(--color);
+    padding: 1% 3%;
+}
+
+div.categoryContainer div#shop button {
+    font-size: 100%;
+    font-weight: bold;
+    width: fit-content;
+    color: var(--color);
+    text-align: center;
+    background-color: var(--primary);
+    border: var(--primary) 2px solid;
+    border-radius: 10px;
+    padding: 1% 3%;
+    margin: 1% 2%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+div.categoryContainer div#shop button:hover {
+    background-color: var(--color);
+    color: var(--primary);
+    border: var(--primary) 2px solid;
+}
+
+div.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.book {
+    font-size: 120%;
+    width: fit-content;
+    font-weight: bold;
+    color: var(--color);
+    text-align: center;
+    background-color: var(--primary);
+    border: var(--primary) 2px solid;
+    border-radius: 10px;
+    padding: 2% 5%;
+    margin: 1% 2%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button.book:hover {
+    background-color: var(--color);
+    color: var(--primary);
+    border: var(--primary) 2px solid;
+}
+
+iframe {
+    width: 600px; 
+    height: 450px; 
+    border: 0;
+    padding: 3% 3%;
+}
+
+/* ############## Contact ############## */
 
 div#contact {
     display: flex;
@@ -74,6 +274,7 @@ div#contact {
     border-radius: 10px;
     background: var(--primary);
     margin: 0 10vw;
+    padding-bottom: 3%;
 }
 
 div#contact h2 {
@@ -86,10 +287,11 @@ div#contact h2 {
 
 div.container{
     display: flex;
-    width: 100%;
+    width: 90%;
     height: fit-content;
     border-radius: 10px;
     background: var(--color);
+    margin: 0 auto 2%;
 }
 
 div#facebook {
@@ -117,6 +319,33 @@ div#facebook a {
     background-size: cover;
 }
 
+div#insta {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    background: transparent;
+    margin: 0 3%;
+    cursor: pointer;
+}
+
+div#insta p {
+    font-size: 110%;
+    font-weight: bold;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div#insta a {
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/instagram.webp");
+    background-size: cover;
+}
+
 div.container a#num {
     text-decoration: none;
     color: var(--secondary);
@@ -134,6 +363,8 @@ div.container a#num:hover {
     box-shadow: 0 0 20px var(--green);
 }
 
+/* ############## Tarif ############## */
+
 div#tarif {
     display: flex;
     flex-direction: column;
@@ -143,6 +374,7 @@ div#tarif {
     border-radius: 10px;
     background: var(--primary);
     margin: 0 5vw 10vh;
+    padding-bottom: 3%;
 }
 
 div#tarif h2#titleTarif {
@@ -190,7 +422,7 @@ div#tarif div.containerCategory h2.right {
     margin-left: 55%;
 }
 
-div#tarif div.containerCategory div.categoryContainer {
+div.categoryContainer {
     display: flex;
     z-index: 30;
     flex-direction: column;
@@ -202,7 +434,7 @@ div#tarif div.containerCategory div.categoryContainer {
     background: var(--primary);
 }
 
-div#tarif div.containerCategory div.categoryContainer h2 {
+div.categoryContainer h2 {
     font-size: 120%;
     font-weight: bold;
     color: var(--title);
@@ -235,12 +467,15 @@ div#tarif div.containerCategory div.categoryContainer div.productContainer div.c
     justify-content: space-between;
 }
 
+div.img {
+    height: 0;
+}
+
 img#sopolish {
     z-index: 20;
-    transform: scale(0.5) rotateZ(25deg);
+    transform: scale(0.4) rotateZ(-25deg);
     position: relative;
-    top : 170vh;
-    left: 80vw;
+    right: 10vw;
     filter: drop-shadow(0 0 30px var(--primary));
 }
 
@@ -248,8 +483,7 @@ img#byotea {
     z-index: 20;
     transform: scale(0.8) rotateZ(25deg);
     position: relative;
-    top : 40vh;
-    left: 29vw;
+    left: 37vw;
     filter: drop-shadow(0 0 30px var(--primary));
 }
 
@@ -261,8 +495,12 @@ img#byotea {
     margin-left: 3%;
 }
 
-iframe {
-    width: 600px; 
-    height: 450px; 
-    border: 0;
+/* ############## TEST ############## */
+
+/* .Rkt9F4BV7O3LQSywHdJy::-webkit-scrollbar {
+    display: none;
+} */
+
+a.e9TS9yoMqqIN2PqBo1QG {
+    display: none !important;
 }
