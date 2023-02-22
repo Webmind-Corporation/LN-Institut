@@ -20,6 +20,7 @@
     --blue: #127CE5;
     --pink: #df5a91;
     --yellow: #ebe126;
+    --red: rgb(189, 38, 38);
     --headerBackground: linear-gradient(to right, rgb(148, 221, 255), rgb(148, 255, 168), rgb(199, 255, 136));
 }
 
@@ -84,8 +85,12 @@ div.topNav ul.listMenu li {
     padding: 1% 3%;
     border-bottom: transparent 2px solid;
     transition: all 0.3s ease-in-out;
-    color: var(--title);
     cursor: pointer;
+}
+
+div.topNav ul.listMenu li a {
+    text-decoration: none;
+    color: var(--title);
 }
 
 div.topNav ul.listMenu li:hover {
@@ -94,24 +99,58 @@ div.topNav ul.listMenu li:hover {
 
 /* ############## FOOTER ############## */
 
-footer {
+/* footer {
     display: flex;
     width: 100vw;
     align-items: center;
     justify-content: center;
-    z-index: 10000;
     height: 14vh;
     transition: all 0.5s ease-in-out;
     backdrop-filter: blur(10px);
 }
 
-footer p {
+footer a {
     display: flex;
     justify-content: center;
+    text-decoration: none;
     font-size: 100%;
     font-weight: bold;
     width: fit-content;
     padding: 1% 3%;
     transition: all 0.3s ease;
     color: var(--title);
+} */
+
+footer {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--color);
+}
+
+footer div#copiryght {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 10%;
+}
+
+footer div#copiryght a, footer div#copiryght p {
+    text-decoration: none;
+    font-size: 70%;
+    font-weight: bold;
+    width: fit-content;
+    transition: all 0.3s ease;
+    color: var(--title);
+}
+
+footer div#copiryght a:hover {
+    text-decoration: underline;
 }

@@ -94,11 +94,12 @@ section p {
     margin-bottom: 5%;
 }
 
-section button {
+section a {
     font-size: 120%;
     font-weight: bold;
     color: var(--color);
     text-align: center;
+    text-decoration: none;
     background-color: var(--primary);
     border: var(--primary) 2px solid;
     border-radius: 10px;
@@ -107,7 +108,7 @@ section button {
     transition: all 0.3s ease-in-out;
 }
 
-section button:hover {
+section a:hover {
     background-color: var(--color);
     color: var(--primary);
     border: var(--primary) 2px solid;
@@ -138,7 +139,7 @@ div#info h2 {
 div#info div.containerInfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 90%;
     height: fit-content;
@@ -164,7 +165,7 @@ div.categoryContainer h3 {
 
 div#containerCategory div.categoryContainer {
     width: 100%;
-    margin-bottom: 10%;
+    margin: 10% 0;
 }
 
 div.categoryContainer div#horaire {
@@ -233,11 +234,13 @@ div.button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0 5%;
 }
 
 button.book {
     font-size: 120%;
     width: fit-content;
+    height: fit-content;
     font-weight: bold;
     color: var(--color);
     text-align: center;
@@ -263,6 +266,16 @@ iframe {
     padding: 3% 3%;
 }
 
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    height: 40vh;
+    width: 40vw;
+    filter: grayscale(100%) invert(95%);
+}
+
 /* ############## Contact ############## */
 
 div#contact {
@@ -273,7 +286,7 @@ div#contact {
     height: fit-content;
     border-radius: 10px;
     background: var(--primary);
-    margin: 0 10vw;
+    margin: 0 10vw 10vh;
     padding-bottom: 3%;
 }
 
@@ -287,18 +300,32 @@ div#contact h2 {
 
 div.container{
     display: flex;
+    justify-content: space-evenly;
     width: 90%;
     height: fit-content;
     border-radius: 10px;
     background: var(--color);
     margin: 0 auto 2%;
+    padding: 1% 0;
+}
+
+div.container div.reseaux {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 50%;
+    min-width: 30%;
+    min-height: 10vh;
+    margin: 2% 1%;
 }
 
 div#facebook {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2%;
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     background: transparent;
@@ -322,8 +349,9 @@ div#facebook a {
 div#insta {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2%;
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     background: transparent;
@@ -346,21 +374,42 @@ div#insta a {
     background-size: cover;
 }
 
+p.sep {
+    writing-mode: vertical-rl;
+    color: var(--primary);
+    text-align: center;
+}
+
+div.autres {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2% 1%;
+    width: 50%;
+}
+
 div.container a#num {
+    font-size: 120%;
     text-decoration: none;
-    color: var(--secondary);
-    font-size: 130%;
-    border-radius: 10px;
+    width: fit-content;
     height: fit-content;
-    padding: 1% 2%;
+    font-weight: bold;
+    color: var(--color);
+    text-align: center;
+    background-color: var(--primary);
+    border: var(--primary) 2px solid;
+    border-radius: 10px;
+    padding: 2% 5%;
+    margin: 5% 2%;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
-    margin: auto 0;
 }
 
 div.container a#num:hover {
-    background: var(--secondary);
-    color: var(--color);
-    box-shadow: 0 0 20px var(--green);
+    background-color: var(--color);
+    color: var(--primary);
+    border: var(--primary) 2px solid;
 }
 
 /* ############## Tarif ############## */
@@ -406,7 +455,7 @@ div#tarif div.containerCategory {
     margin: 0 auto 2%;
 }
 
-div#tarif div.containerCategory h2 {
+div#tarif div.containerCategory > h2 {
     font-size: 150%;
     font-weight: bold;
     color: var(--primary);
@@ -434,7 +483,7 @@ div.categoryContainer {
     background: var(--primary);
 }
 
-div.categoryContainer h2 {
+div.containerCategory div.categoryContainer > h2 {
     font-size: 120%;
     font-weight: bold;
     color: var(--title);
@@ -495,12 +544,177 @@ img#byotea {
     margin-left: 3%;
 }
 
-/* ############## TEST ############## */
+/* ############## WRAPPER ############## */
 
-/* .Rkt9F4BV7O3LQSywHdJy::-webkit-scrollbar {
+div#wrapGift {
     display: none;
-} */
+    background-color: #141414f6;
+    position: fixed;
+    width: 70vw;
+    left: 15vw;
+    height: 75vh;
+    top: 15vh;
+    z-index: 10000;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 2%;
+    gap: 5%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
 
-a.e9TS9yoMqqIN2PqBo1QG {
-    display: none !important;
+div#wrapGift.hide {
+    opacity: 0;
+}
+
+div.contentSectionGift {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+h2.titleSectionGift {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+div.contentSectionGift div.gift {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    word-break: break-word;
+    padding: 5% 5% 2%;
+}
+
+div.contentSectionGift div.gift p{
+    font-size: 130%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin: 1% 0 0 5%;
+}
+
+div.contentSectionGift div.gift div.montant {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 5vh 0 0;
+}
+
+div.contentSectionGift div.gift div.montant div#nameGift{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    font-size: 100%;
+}
+
+div.contentSectionGift div.gift div.montant div#nameGift p{
+    font-size: 100%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin: 0 2%;
+}
+
+div.contentSectionGift div.gift div.montant div#nameGift input{
+    width: 50%;
+    font-size: 100%;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    padding: 1% 2%;
+    border: transparent 2px solid;
+}
+
+div.contentSectionGift div.gift div.montant div#amount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    font-size: 100%;
+}
+
+div.contentSectionGift div.gift div.montant div#amount p{
+    font-size: 100%;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin: 0 2%;
+}
+
+div.contentSectionGift div.gift div.montant div#amount input{
+    width: 50%;
+    font-size: 100%;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    padding: 1% 2%;
+    border: transparent 2px solid;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+div.contentSectionGift div.gift div.montant div#amount input:hover, div.contentSectionGift div.gift div.montant div#nameGift input:hover{
+    background-color: #141414f6;
+    color: var(--primary);
+    border: var(--primary) 2px solid;
+}
+
+div.contentSectionGift div.gift div.montant div#amount input:focus, div.contentSectionGift div.gift div.montant div#nameGift input:focus{
+    background-color: #141414f6;
+    color: var(--primary);
+    border: var(--primary) 2px solid;
+}
+
+div.contentSectionGift div.gift p.conditions{
+    font-size: 70%;
+    font-weight: bold;
+    color: var(--title);
+    text-align: center;
+    margin: 1% 0 0 5%;
+    width: 75%;
+}
+
+div#close {
+    position: absolute;
+    border: 2px solid var(--red);
+    right: 1vw;
+    top: 1vw;
+    padding: 1% 2%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    color: var(--red);
+}
+
+div#close:hover {
+    background-color: var(--red);
+    color: var(--title);
 }
